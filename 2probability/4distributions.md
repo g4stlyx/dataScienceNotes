@@ -39,3 +39,74 @@
 
 ## Discrete Distributions and its Characteristics
 
+* finitely many distinct outcomes
+* P(Y<=y) = P[Y < (y+1)]
+
+### The Uniform Distribution: U(a,b)
+
+* X ~ U(a,b)
+* all outcomes have equal probability (like rolling a die or flipping a coin)
+
+### Bernoulli Distribution: Bern(p)
+
+* 1 trial, 2 possible outcomes
+* 1 outcome has the possibility "p", while the other has "1-p"
+* variance = σ^2 = p(1-p)
+
+### Binomial Distribution: B(n,p)
+
+* n trial, 2 possible outcomes for each trial
+* P(desired outcome) = p
+* p(alternative outcome) = 1-p
+* p(y) = Combination(n,y) * p^y * (1-p)^(n-y)
+* expected value = E(x) = x_0 * p(x_0) + ... + x_n * p(x_n)
+    * Y ~ B(n,p)   -> E(Y) = n*p
+* variance = σ^2 = E(y^2) - [E(y)]^2 = n*p*(1-p)
+
+### Poisson Distribution: Po(λ)
+
+* frequency with which an event occurs
+* P(Y) = (λ^y * e^-y)/y!
+
+## Characteristics of Continuous Distributions
+
+* their sample space is infinite
+    * so cannot record the frequency of each distinct value
+    * so P(X) = 0, and P(x>X) = P(x>=X)
+    * e.g P(x<6) = P(x<=6), and P(x=6) = 0
+
+### Normal Distribution: N(μ, σ^2)
+
+* E(x) = μ
+* Var(X) = σ^2 = E(X^2) - [E(X)]^2
+* Bell-shaped graph
+
+### Standard Normal Distribution: Z(0, 1)
+
+* E(X) = μ = 0
+* Var(X) = 1
+* Y -> Z
+    * Z = (Y-μ) / σ
+
+### The Students'T Distribution: T(k)
+
+* if k>2
+    * E(Y) = μ
+    * Var(Y) = (S^2 *k) / (k-2)
+
+### Chi-Squared Distribution: X^2(k)
+
+* asymmetric
+* have a table of known values: N,T
+* E(X) = k, Var(X)=2k
+
+### Exponential Distribution: Exp(λ)
+
+* E(Y) = 1/λ
+* Var(Y) = 1/λ^2
+* No table
+
+### Logistic Distribution: Logistic(μ, S)
+
+* E(y) = μ
+* Var(Y) = (S^2 * pi^2) / 3
