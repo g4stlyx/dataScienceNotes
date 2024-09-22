@@ -1,0 +1,1 @@
+# 175 minutes of lecture and tens of exercises are skipped. (chapters 22 to 30)
