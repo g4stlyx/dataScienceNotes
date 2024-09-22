@@ -30,7 +30,9 @@ sns.set_theme() # to use seaborn as the library used to plot
 data = pd.read_csv('simpleLinearRegression.csv')
 # print(data.describe())
 
-
+# y = b0 + b1*x1
+y= data["GPA"]
+x1= data["SAT"]
 
 #! gives info about the data
 x = sm.add_constant(x1)
@@ -41,10 +43,6 @@ results = sm.OLS(y,x).fit()
 # we get b0 and b1 from the results.summary(), specifically from the constants part of it.
 
 #! ploting
-# y = b0 + b1*x1
-y= data["GPA"]
-x1= data["SAT"]
-
 plt.scatter(x1,y)
 yhat = 0.0017*x1 + 0.275 #! the function of the regression (y=b0+b1*x1)
 fig = plt.plot(x1, yhat, lw=4, c='orange', label='regression line')
