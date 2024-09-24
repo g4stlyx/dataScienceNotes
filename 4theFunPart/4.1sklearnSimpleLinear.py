@@ -6,7 +6,7 @@ sns.set_theme()
 from sklearn.linear_model import LinearRegression
 
 data = pd.read_csv("2.0simpleLinearRegression.csv")
-print(data.head())
+print(data.head()) # to display the first 5 records
 
 x = data['SAT'] # feature
 y = data['GPA'] # target
